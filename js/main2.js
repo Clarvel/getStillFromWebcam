@@ -43,7 +43,7 @@ function errorCallback(error) {
 
 function start() {
 	if (window.stream) {
-		videoElement.src = null;
+		video.src = null;
 		window.stream.stop();
 	}
 	var videoSource = videoSelect.value;

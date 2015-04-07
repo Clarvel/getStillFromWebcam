@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<style>
+    		div.select {
+      			display: inline-block;
+    			margin: 0 0 1em 0;
+    		}
+    		select {
+      			width: 110px;
+    		}
+  		</style>
+	</head>
 	<body>
 		<!--
 			Ideally these elements aren't created until it's confirmed that the 
 			client supports video/camera, but for the sake of illustrating the 
 			elements involved, they are created with markup (not JavaScript)
 		-->
-		<video id="video" width="640" height="480" autoplay></video><br>
+		<div class="select">
+			<label for="videoSource">Video source: </label><select id="videoSource"></select>
+		</div>
+
+		<video id="video" width="640" height="480" autoplay muted></video><br>
 		<button id="snap">Snap Photo</button><br>
 		<canvas id="canvas" width="640" height="480"></canvas>
 
 		<!-- Scripts -->
 
-		<script src="js/main.js"></script>
+		<script src="js/main2.js"></script>
 	</body>
 </html>

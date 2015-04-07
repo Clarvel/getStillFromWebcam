@@ -2,14 +2,25 @@
 <html>
 	<head>
 		<style>
+			select{
+				min-width: 100px;
+			}
+			video{
+				min-width: 1px;
+				min-height: 1px;
+			}
+			canvas{
+				min-width: 1px;
+				min-height: 1px;
+			}
 
   		</style>
 	</head>
 	<body>
 		<!--
-			Ideally these elements aren't created until it's confirmed that the 
-			client supports video/camera, but for the sake of illustrating the 
-			elements involved, they are created with markup (not JavaScript)
+			examples grabbed from:
+			https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/source
+			http://davidwalsh.name/browser-camera
 		-->
 		Video source: <select id="videoSource"></select>
 		<br>

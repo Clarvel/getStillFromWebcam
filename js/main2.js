@@ -2,6 +2,7 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 var videoSelect = document.querySelector('select#videoSource');
+var video = document.getElementById("video");
 
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
@@ -33,7 +34,7 @@ function gotSources(sourceInfos) {
 
 function successCallback(stream) {
 	window.stream = stream; // make stream available to console
-	videoElement.src = window.URL.createObjectURL(stream);
+	video.src = window.URL.createObjectURL(stream);
 }
 
 function errorCallback(error) {

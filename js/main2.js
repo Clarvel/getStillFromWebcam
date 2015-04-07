@@ -15,7 +15,7 @@ if (typeof MediaStreamTrack === 'undefined') {
 // Trigger photo take
 document.getElementById("snap").addEventListener("click", function() {
 	console.log("clicked!");
-	context.drawImage(video, 0, 0, 640, 480);
+	context.drawImage(video, 0, 0);
 });
 
 function gotSources(sourceInfos) {
@@ -26,8 +26,7 @@ function gotSources(sourceInfos) {
 		if (sourceInfo.kind === 'video') {
 			option.text = sourceInfo.label || 'camera ' + (videoSelect.length + 1);
 			videoSelect.appendChild(option);
-		} else {
-			console.log('Some other kind of source: ', sourceInfo);
+			console.log('Video source found: ', sourceInfo);
 		}
 	}
 }

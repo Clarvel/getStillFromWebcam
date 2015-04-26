@@ -25,6 +25,24 @@ function keydown(evt){
 	if(evt.keyCode == 32){
 		console.log("spaced!");
 		context.drawImage(video, 0, 0);
+		var img = new Image();
+		img.id = "scan.png";
+		img.src = context.toDataURL();
+
+
+		$.ajax({
+			  url: '//www-users.cselabs.umn.edu/~aldaw004/Image-Video-Gallery/fileUpload.php',
+			  data: {'file' : img.src},
+		   type: "POST",
+		success: function( json ) {
+			alert(json);
+		},
+		error: function( xhr, status, errorThrown ) {
+			alert( "Error: " + errorThrown +" \nStatus: " + status );
+			}
+		});
+
+
 	}
 }
 

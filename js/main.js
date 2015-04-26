@@ -32,7 +32,7 @@ function keydown(evt){
 
 		$.ajax({
 			  url: '//www-users.cselabs.umn.edu/~aldaw004/Image-Video-Gallery/fileUpload.php',
-			  data: {'file' : img.src},
+			  data: {'image' : img.src},
 		   type: "POST",
 		success: function( json ) {
 			alert(json);

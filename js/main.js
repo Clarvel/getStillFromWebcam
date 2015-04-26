@@ -21,7 +21,7 @@ if (typeof MediaStreamTrack === 'undefined') {
 document.onkeydown = keydown;
 function keydown(evt){
 	if(!evt) evt=event;
-	if(evt.charCode == 32){
+	if(evt.keyCode == 32){
 		console.log("spaced!");
 		context.drawImage(video, 0, 0);
 	}

@@ -13,10 +13,19 @@ if (typeof MediaStreamTrack === 'undefined') {
 }
 
 // Trigger photo take
-document.getElementById("snap").addEventListener("click", function() {
+/*document.getElementById("snap").addEventListener("click", function() {
 	console.log("clicked!");
 	context.drawImage(video, 0, 0);
-});
+});*/
+
+document.onkeydown = keydown;
+function keydown(evt){
+	if(!evt) evt=event;
+	if(evt.charCode == 32){
+		console.log("spaced!");
+		context.drawImage(video, 0, 0);
+	}
+}
 
 
 

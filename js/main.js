@@ -27,7 +27,7 @@ function keydown(evt){
 		context.drawImage(video, 0, 0);
 		var img = new Image();
 		img.id = "scan.png";
-		img.src = context.toDataURL();
+		img.src = canvas.toDataURL();
 
 
 		$.ajax({

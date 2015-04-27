@@ -24,7 +24,9 @@ function keydown(evt){
 	console.log(evt);
 	if(evt.keyCode == 32){
 		console.log("spaced!");
-		context.drawImage(video, 0, 0);
+		var s = [10, 10, 630, 460]; // x, y, w, h
+		var d = [0, 0, s[2], s[3]]; // x, y, w, h
+		context.drawImage(video, s[0], s[1], s[2], s[3], d[0], d[1], d[2], d[3]);
 		var img = new Image();
 		img.id = "scan.png";
 		img.src = canvas.toDataURL();
@@ -45,7 +47,6 @@ function keydown(evt){
 
 	}
 }
-
 
 
 function gotSources(sourceInfos) {
